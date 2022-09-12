@@ -14,7 +14,7 @@ h1 {
     margin: 0;
     margin-top: 2vmin;
     margin-bottom: 2vmin;
-    font-size: 4vmin;
+    font-size: 3vmin;
     padding: 0;
 }
 p {
@@ -50,6 +50,9 @@ p {
     height: 38vmin;
     min-height: fit-content;
     width: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 4vmin;
+    border-bottom-right-radius: 4vmin;
     transition-duration: 0.5s;
 }
 .header-drop:hover {
@@ -82,8 +85,6 @@ p {
     top: -4vmin;
     height: 8vmin;
     width: 100%;
-    border-bottom-left-radius: 4vmin;
-    border-bottom-right-radius: 4vmin;
     box-shadow: 0.5vmin;
     background-image: linear-gradient(rgb(121, 152, 255), rgb(145, 171, 255));
 }
@@ -206,5 +207,6 @@ p {
     border-radius: 4vmin;
 }
 .comment-list {
+    padding-left: 3vmin;
     flex: 1 1 500px;
 }

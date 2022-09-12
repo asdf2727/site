@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const port = 80;
+const port = 8081;
 const host = "127.0.0.1";
 
 app.use(express.static('public'));
@@ -15,8 +15,8 @@ app.get('/courses/:course/', function (req, res) {
     res.sendFile( __dirname + "/HTML/courses/" + req.params.course + "/course.html" );
 });
 app.get('/courses/:course/:lesson/', function (req, res) {
-    console.log("Requesting the lesson " + req.params.lesson + ".s")
-    res.sendFile( __dirname + "/HTML/courses/" + req.params.course + "/" + req.params.lesson + ".html" );
+    console.log("Requesting the lesson " + req.params.course + " - " + req.params.lesson + ".")
+    res.sendFile( __dirname + "/HTML/courses/" + req.params.course + "/lessons/" + req.params.lesson + ".html" );
 });
 
 const server = app.listen(port, host, function () {
