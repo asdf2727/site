@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/main.css">
     </head>
     <body>
-        <script src="/js/main.js"></script>
+        <script src="/js/resize-animation-stopper.js"></script>
         
         <div class="header">
             <div class="header-static">
@@ -99,12 +99,10 @@
             <div class="comment-zone background-image-1-end">
                 <div class="background-image-1-color-1"></div>
                 <div class="background-image-1-color-2"></div>
-                <div class="comment-form">
-                    <form>
-                        <input class="comment-input" type="text" id="Comment" name="lname"><br>
-                        <input type="submit" value="Submit">
-                    </form> 
-                </div>
+                <form class="comment-form">
+                    <span class="comment-input" role="textbox" contenteditable="true"></span>
+                    <input class="comment-submit" type="submit" value="Submit">
+                </form>
                 <div class="comment-list">
                     <p class="comment-cell">Username1: Comment 1</p>
                     <p class="comment-cell">Username2: Comment 2</p>

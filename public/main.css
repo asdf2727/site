@@ -7,8 +7,9 @@
 
 body {
     margin:0px;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(230, 230, 230);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmin;
 }
 h1 {
     margin: 0;
@@ -21,13 +22,13 @@ p {
     margin: 0;
     margin-top: 2vmin;
     margin-bottom: 2vmin;
-    font-size: 2vmin;
 }
 
 /* ------------------ HEADER ------------------ */
 
 .header {
     z-index: 1;
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     width: 100%;
@@ -190,7 +191,7 @@ p {
     z-index: 1;
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 10000vh;
     width: 100%;
 }
 
@@ -199,14 +200,56 @@ p {
     padding-top: 3vmin;
     display: flex;
     flex-flow: row-reverse wrap;
-    align-items: stretch;
+    align-items: flex-start;
+}
 
+.comment-list {
+    flex: 1 0 60vmin;
+    padding-left: 3vmin;
 }
 .comment-form {
-    flex: 1 1 300px;
-    border-radius: 4vmin;
+    flex: 1 0 40vmin;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    margin: 1vmin;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.3vmin;
+    border-radius: 2vmin;
+    padding: 1vmin;
 }
-.comment-list {
-    padding-left: 3vmin;
-    flex: 1 1 500px;
+
+.comment-input:empty::before {
+    content: "Start typing here...";
+    color: grey;
+}
+
+.comment-input, .comment-input:focus {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2vmin;
+    border: none;
+    outline: none;
+    padding: 0;
+    resize: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    word-wrap: break-word;
+    word-wrap: anywhere;
+}
+.comment-submit {
+    background-color: rgb(133, 161, 255);
+    display: inline-block;
+    height: 3vmin;
+    min-height: fit-content;
+    width: 20%;
+    min-width: fit-content;
+    font-size: 1.5vmin;
+    border: none;
+    border-radius: 1vmin;
 }
